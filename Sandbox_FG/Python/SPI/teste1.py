@@ -17,8 +17,10 @@ dev.bits_per_word = 8
 #dev.xfer([0x80,0x60])
 #dev.xfer([0xA0,0x3C])
 
-teste = dev.xfer([0xaa])
-
+while True:
+    dev.xfer([0xff])
+    dev.cshigh = false
+    
 #print dev.bits_per_word
 
 
