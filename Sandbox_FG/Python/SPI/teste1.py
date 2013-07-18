@@ -17,7 +17,7 @@ dev.bits_per_word = 16
 #dev.xfer([0x80,0x60])
 #dev.xfer([0xA0,0x3C])
 while True:
-    dev.xfer2([0xAA])
+    dev.xfer2([0xAAAA])
 
 #print dev.bits_per_word
 
