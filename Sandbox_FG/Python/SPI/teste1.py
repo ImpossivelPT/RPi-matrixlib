@@ -11,9 +11,12 @@ dev.threewire = False
 dev.loop = False # loop is "loopback"
 dev.bits_per_word = 16
 
-#dev.xfer([0xff])
+#dev.xfer([0x0000])
+dev.xfer([0x8020])
+dev.xfer([0x8060])
+dev.xfer([0xA03C])
 
-print dev.bits_per_word
+#print dev.bits_per_word
 
 
 dev.close()
