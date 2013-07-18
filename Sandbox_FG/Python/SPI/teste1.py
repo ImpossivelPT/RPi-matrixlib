@@ -1,28 +1,13 @@
 import spidev
+import time
 
-dev = spidev.SpiDev(0,0) # open up /dev/spidev0.1
-
-dev.max_speed_hz = 10000
-dev.mode = 1
-dev.max_speed_hz = 500000
-dev.cshigh = False
-dev.lsbfirst = False
-dev.threewire = False
-dev.loop = False # loop is "loopback"
-
-dev.bits_per_word = 8
-
-#dev.xfer([0x0000])
-#dev.xfer([0x80,0x20])
-#dev.xfer([0x80,0x60])
-#dev.xfer([0xA0,0x3C])
+spi = spidev.SpiDev()
+spi.open(0,0)
 
 while True:
-    dev.cshigh = False
-    dev.writebytes([0xff])
-    dev.cshigh = False
-    
-#print dev.bits_per_word
-
-
-dev.close()
+    spi.writebytes([0,0,0])     # turn all lights off
+    time.sleep(1)
+    print "1"
+    spi.writebytes([1,255,254]) # turn all lights on
+    time.sleep(1)
+    print "2"
