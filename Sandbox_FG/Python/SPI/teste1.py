@@ -19,7 +19,7 @@ dev.bits_per_word = 8
 
 while True:
     dev.xfer([0xff])
-    dev.cshigh = false
+    dev.cshigh = False
     
 #print dev.bits_per_word
 
