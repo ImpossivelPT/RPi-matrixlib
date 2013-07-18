@@ -1,7 +1,7 @@
 import spidev
 import time
 
-dev = spidev.SpiDev(0,1) # open up /dev/spidev0.1
+dev = spidev.SpiDev(0,0) # open up /dev/spidev0.1
 """
 dev.max_speed_hz = 10000
 dev.mode = 1
@@ -31,6 +31,7 @@ dev.cshigh = False
 dev.writebytes([10255])
 """
 while True:
+    dev.cshigh = False
     dev.writebytes([0xffff])
     
 #print dev.bits_per_word
