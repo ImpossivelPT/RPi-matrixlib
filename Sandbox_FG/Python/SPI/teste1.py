@@ -12,9 +12,9 @@ dev.loop = False # loop is "loopback"
 dev.bits_per_word = 16
 
 #dev.xfer([0x0000])
-dev.xfer([0x8020])
-dev.xfer([0x8060])
-dev.xfer([0xA03C])
+dev.xfer([0x80,0x20])
+dev.xfer([0x80,0x60])
+dev.xfer([0xA0,0x3C])
 
 #print dev.bits_per_word
 
