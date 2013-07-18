@@ -17,7 +17,7 @@ dev.bits_per_word = 8
 #dev.xfer([0x80,0x60])
 #dev.xfer([0xA0,0x3C])
 
-print dev.xfer([01010100])
+print dev.xfer([0x01])
 
 #print dev.bits_per_word
 
