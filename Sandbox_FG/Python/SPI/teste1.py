@@ -10,14 +10,14 @@ dev.lsbfirst = False
 dev.threewire = False
 dev.loop = False # loop is "loopback"
 """
-dev.bits_per_word = 8
+dev.bits_per_word = 16
 
 #dev.xfer([0x0000])
 #dev.xfer([0x80,0x20])
 #dev.xfer([0x80,0x60])
 #dev.xfer([0xA0,0x3C])
 
-print dev.xfer([0x05])
+print dev.xfer([0x05,0x08])
 
 #print dev.bits_per_word
 
