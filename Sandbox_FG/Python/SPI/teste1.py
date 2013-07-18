@@ -30,9 +30,7 @@ dev.cshigh = True
 dev.cshigh = False
 dev.writebytes([10255])
 """
-while True:
-    dev.cshigh = False
-    dev.writebytes([0xffff])
+
     
 #print dev.bits_per_word
 
