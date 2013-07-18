@@ -18,7 +18,7 @@ dev.bits_per_word = 8
 #dev.xfer([0x80,0x20])
 #dev.xfer([0x80,0x60])
 #dev.xfer([0xA0,0x3C])
-dev.writebytes([0x104])
+dev.writebytes([0x1004])
 
 dev.writebytes([0x100C])
 
